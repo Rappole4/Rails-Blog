@@ -1,24 +1,3 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project uses Ruby on Rails to make a blog that allows users to sign-up and comment on posts created by the admin team.  In this version you can access the admin page by adding /index to the homepage url.  All buttons function correctly and have purpose.  The blog is designed to help those who are lost about just about anything and want some advise or guidance.
