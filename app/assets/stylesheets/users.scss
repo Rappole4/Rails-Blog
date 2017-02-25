@@ -1,0 +1,75 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// All Pages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+html {
+	background-color:lightblue;
+}
+h1 {
+font: 45px Helvetica, sans-serif;
+color: #333;
+}
+fieldset {
+	margin:5px;
+	background-color:lightyellow;
+	width:200px;
+	border-width:16px;
+}
+legend {
+	color:white;
+	background-color:black;
+	font-size:14px;
+}
+div {
+	float:left;
+}
+
+// Show Page (Profile) && Index Page (Admin) %%%%%%%%%%
+#title {
+	text-align:center;
+	font-family: 'Sansita', sans-serif;
+	font-size:55px;
+}
+#break {
+	margin:40px 120px 10px 120px;
+	width:850px;
+}
+.postdata {
+	width:90%;
+	height:500px;
+	overflow-y:scroll;
+}
+
+// Show Page (Profile) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#ulshow {
+	clear:left;
+}
+#createcomments {
+	width:95%;
+	height:10%;
+}
+
+// Index Page (Admin) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#information {
+	width:60%;
+	float:left;
+}
+#admin {
+	width:30%;
+	height:500px;
+	float:right;
+}
+#breakindex {
+	width:750px;
+}
+
+// New Page (Signup) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#datapage {
+	width:80%
+}

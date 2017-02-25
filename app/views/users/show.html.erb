@@ -1,0 +1,82 @@
+<!-- Main user page -->
+<h1 id="title"><strong><link href="https://fonts.googleapis.com/css?family=Sansita" rel="stylesheet">The Lost</strong></h1>
+<!-- Profile information -->
+<div>
+	<h1>Welcome <%= @user.fname %>!</h1>
+
+	<fieldset>
+		<legend>Profile:</legend>
+		<table>
+			<tr>
+				<th>ID</th>
+				<td><%= @user.id %></td>
+			</tr>
+			<tr>
+				<th>First</th>
+				<td><%= @user.fname %></td>
+			</tr>
+			<tr>
+				<th>Last</th>
+				<td><%= @user.lname %></td>
+			</tr>
+			<tr>
+				<th>Username</th>
+				<td><strong><%= @user.username %></strong></td>
+			</tr>
+			<tr>
+				<th>Email</th>
+				<td><%= @user.email %></td>
+			</tr>
+			<tr>
+				<th>Address</th>
+				<td><%= @user.address %></td>
+
+			</tr>
+			<tr>
+				<th>Edit Profile</th>
+				<td><%= link_to "Edit", edit_user_path %></p>
+			</tr>
+		</table>
+	</fieldset>
+</div>
+
+<!-- Posts box -->
+<div>
+	<%= form_for Comment.new do |f| %>
+	<fieldset id="break">
+		<legend>Posts: </legend>
+		<fieldset class="postdata">
+			<% @posts.each do |post| %>
+			<table>
+				<tr>
+					<th><h2><input type="radio" name="postcom" value="<%= post.id %>"><%= post.id - 15%>: </h2></th>
+					<td><h3><strong><%= post.post %></strong></h3></td>
+					
+					<% post.comments.each do |comment| %>
+					<tr>
+					<th><%= comment.user.username %>: </th>
+						<td><%= comment.comment %></td><br>
+						
+					</tr>
+					<% end %>
+					<% end %>
+				</table>
+			</fieldset>
+		</fieldset>
+	</div>
+
+<!-- Comments box -->
+	<fieldset id="createcomments">
+		<legend>Create Comments:</legend>		
+		<%= f.text_area :comment, cols:190, rows:6%></div><br><br>
+		<%= f.submit %>
+	</fieldset>
+	<% end %>
+	<br>
+
+<!-- Logout button -->
+	<div id="ulshow">
+		<ul>
+			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
+		</ul>
+	</div>

@@ -1,0 +1,20 @@
+<!-- Sign-up page and form -->
+<fieldset id="datapage">
+<h1>Welcome to 'The Lost' signup page</h1>
+<p>Just a few things to set up your profile and you'll be able to join in all our fun conversations, to help all find their way out of the lost.</p>
+<%= form_for User.new do |f| %>
+	<%= f.label :fname, "First Name" %>
+	<%= f.text_field :fname %><br><br>
+	<%= f.label :lname, "Last Name" %>
+	<%= f.text_field :lname %><br><br>
+	<%= f.label :email %>
+	<%= f.text_field :email %><br><br>
+	<%= f.label :address %>
+	<%= f.text_field :address %><br><br>
+	<%= f.label :username %>
+	<%= f.text_field :username %><br><br>
+	<%= f.label :password %>
+	<%= f.password_field :password %><br><br>
+	<%= f.submit %>
+<% end %>
+</fieldset>

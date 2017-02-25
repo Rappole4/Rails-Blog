@@ -1,0 +1,12 @@
+<!-- Login page and form -->
+<fieldset>
+	<legend>Login:</legend>
+<%= form_for :session, url: login_path do |f| %>
+        <%= f.label :username %>
+        <%= f.text_field :username %><br><br>
+        <%= f.label :password %>
+        <%= f.password_field :password %><br><br>
+        <%= f.submit "Log In" %>
+<% end %>
+<p>New user? <%= link_to "Sign up now!", signup_path %></p>
+</fieldset>

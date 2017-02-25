@@ -1,0 +1,16 @@
+<fieldset id="datapage">
+<h1>Update Profile</h1>
+<%= form_for current_user, html: {method: :patch} do |f| %>
+	<%= f.label :lname, "Last Name" %>
+	<%= f.text_field :lname %><br><br>
+	<%= f.label :email %>
+	<%= f.text_field :email %><br><br>
+	<%= f.label :address %>
+	<%= f.text_field :address %><br><br>
+	<%= f.label :password %>
+	<%= f.password_field :password %><br><br>
+	<%= f.submit %>
+<% end %>
+</fieldset>
+<th>Delete Account</th>
+<td><%= link_to "Delete", "/users/#{@user.id}", method: :delete %></td>

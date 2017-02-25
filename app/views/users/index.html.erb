@@ -1,0 +1,70 @@
+<!-- Main admin page -->
+
+<!-- User information box -->
+<fieldset id="information">
+	<legend>Datapage:</legend>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>First</th>
+			<th>Last</th>
+			<th>Username</th>
+			<th>Email</th>
+			<th>Address</th>
+			<th>Action</th>
+		</tr>
+		<% @users.each do |user| %>
+		<tr>
+			<td><a href="/users/<%= user.id %>"><%= user.id %></a></td>
+			<td><%= user.fname %></td>
+			<td><%= user.lname %></td>
+			<td><strong><%= user.username %></strong></td>
+			<td><%= user.email %></td>
+			<td><%= user.address %></td>
+			<td><%= link_to "Delete", "/users/#{user.id}", method: :delete %></td>
+		</tr>
+		<% end %>
+	</table>
+</fieldset>
+
+<!-- Posting blogs box -->
+<fieldset id="admin">
+	<legend>Create Post</legend>
+	<%= form_for Post.new do |f| %>
+	<%= f.text_area :post, cols:60, rows:26%></div><br><br>
+	<%= f.submit %>
+	<% end %>
+</fieldset>
+<br>
+
+<!-- Posted posts area -->
+<fieldset id="breakindex">
+	<legend>Posts: </legend>
+	<fieldset class="postdata">
+		<% @posts.each do |post| %>
+		<table>
+			<tr>
+				<th><%= post.id %></th>
+				<td><%= post.post %></td>
+				<td><%= link_to "Delete", "/posts/#{post.id}", method: :delete %></td>
+			</tr>
+		</table>
+		<% end if @posts %>
+	</fieldset>
+</fieldset>
+
+<!-- Posted comments area -->
+<fieldset id="break">
+	<legend>Comments: </legend>
+	<fieldset class="postdata">
+		<% @comments.each do |comment| %>
+		<table>
+			<tr>
+				<th><%= comment.id %></th>
+				<td><%= comment.comment %></td>
+				<td><%= link_to "Delete", "/comments/#{comment.id}", method: :delete %></td>
+			</tr>
+		</table>
+		<% end if @comments %>
+	</fieldset>
+</fieldset>
