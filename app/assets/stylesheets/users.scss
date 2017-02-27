@@ -52,6 +52,10 @@ div {
 	width:95%;
 	height:10%;
 }
+#adminpage {
+	color:lightblue;
+	font-size:5px;
+}
 
 // Index Page (Admin) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -72,4 +76,12 @@ div {
 
 #datapage {
 	width:80%
+}
+
+// Login Page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#image {
+	background-image: image-url("when_youre_lost.jpg");
+	width:1500px;
+	height:770px;
 }

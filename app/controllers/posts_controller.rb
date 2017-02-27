@@ -7,7 +7,6 @@ class PostsController < ApplicationController
 	def index
 		@posts = Post.all
 	end
-
 	def create
 		@post = Post.create(post: params[:post][:post], user_id: 1)	
 		p @post, params[:post]
@@ -22,5 +21,14 @@ class PostsController < ApplicationController
 			flash[:notice] = "Comment destroyed"
 			redirect_to '/index'
 		end
+	end
+# Used to edit posts
+	def edit
+		@post = Post.find(params[:id])
+	end
+	def update
+		@post = Post.find(params[:id])
+		@post.update(params.require(:post).permit(:post))
+		redirect_to '/index'
 	end
 end
