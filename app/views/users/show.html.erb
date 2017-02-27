@@ -49,14 +49,13 @@
 			<% @posts.each do |post| %>
 			<table>
 				<tr>
-					<th><h2><input type="radio" name="postcom" value="<%= post.id %>"><%= post.id - 15%>: </h2></th>
+					<th><h2><input type="radio" name="postcom" value="<%= post.id %>"></h2></th>
 					<td><h3><strong><%= post.post %></strong></h3></td>
 					
 					<% post.comments.each do |comment| %>
 					<tr>
 					<th><%= comment.user.username %>: </th>
 						<td><%= comment.comment %></td><br>
-						
 					</tr>
 					<% end %>
 					<% end %>
@@ -79,4 +78,10 @@
 		<ul>
 			<li><%= link_to "Log out", logout_path, method: "delete" %></li>
 		</ul>
+	</div>
+
+	<!-- Admin button -->
+	<br><br><br><br><br><br>
+	<div>
+		<a id="adminpage" href="/index">Admin Page</a>
 	</div>

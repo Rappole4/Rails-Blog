@@ -47,6 +47,7 @@
 				<th><%= post.id %></th>
 				<td><%= post.post %></td>
 				<td><%= link_to "Delete", "/posts/#{post.id}", method: :delete %></td>
+				<td><%= link_to "Edit", edit_post_path(post) %></td>
 			</tr>
 		</table>
 		<% end if @posts %>

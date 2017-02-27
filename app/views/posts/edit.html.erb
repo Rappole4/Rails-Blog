@@ -1,0 +1,8 @@
+<fieldset id="datapage">
+<h1>Edit Post</h1>
+<%= form_for @post, html: {method: :patch} do |f| %>
+	<%= f.label :post %>
+	<%= f.text_area :post, cols:60, rows:26 %><br><br>
+	<%= f.submit %>
+<% end %>
+</fieldset>

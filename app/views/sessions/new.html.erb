@@ -1,4 +1,6 @@
 <!-- Login page and form -->
+
+<div id="image">
 <fieldset>
 	<legend>Login:</legend>
 <%= form_for :session, url: login_path do |f| %>
@@ -10,3 +12,5 @@
 <% end %>
 <p>New user? <%= link_to "Sign up now!", signup_path %></p>
 </fieldset>
+
+</div>
